@@ -14,13 +14,13 @@ Sistema de Gestión de Biblioteca · Universidad José Cecilio del Valle
 **Para** mantener organizado el catálogo por temática
 
 **Criterios de aceptación:**
-- [ ] El nombre es requerido (2-80 caracteres) y debe ser único
-- [ ] El backend revalida la unicidad antes de guardar (además del `UNIQUE` en base de datos)
-- [ ] No se puede eliminar una categoría que tiene libros asociados
-- [ ] Cualquier usuario autenticado puede ver el listado; solo el admin puede crear/editar/eliminar
+- [X] El nombre es requerido (2-80 caracteres) y debe ser único
+- [X] El backend revalida la unicidad antes de guardar (además del `UNIQUE` en base de datos)
+- [X] No se puede eliminar una categoría que tiene libros asociados
+- [X] Cualquier usuario autenticado puede ver el listado; solo el admin puede crear/editar/eliminar
 
 **Responsable:** _____________
-**Estado:** ☐ Pendiente ☐ En progreso ☐ Completado
+**Estado:** ☐ Pendiente ☐ En progreso X Completado
 
 ---
 
@@ -30,12 +30,12 @@ Sistema de Gestión de Biblioteca · Universidad José Cecilio del Valle
 **Para** poder asociarlos correctamente a los libros del catálogo
 
 **Criterios de aceptación:**
-- [ ] El nombre es requerido (2-150 caracteres); la nacionalidad es opcional
-- [ ] No se puede eliminar un autor que tiene libros asociados
-- [ ] Cualquier usuario autenticado puede ver el listado; solo el admin puede crear/editar/eliminar
+- [X] El nombre es requerido (2-150 caracteres); la nacionalidad es opcional
+- [X] No se puede eliminar un autor que tiene libros asociados
+- [X] Cualquier usuario autenticado puede ver el listado; solo el admin puede crear/editar/eliminar
 
 **Responsable:** _____________
-**Estado:** ☐ Pendiente ☐ En progreso ☐ Completado
+**Estado:** ☐ Pendiente ☐ En progreso x Completado
 
 ---
 
@@ -45,15 +45,15 @@ Sistema de Gestión de Biblioteca · Universidad José Cecilio del Valle
 **Para** llevar control de qué ejemplares están prestados y cuándo deben devolverse
 
 **Criterios de aceptación:**
-- [ ] Solo se puede prestar un libro con stock disponible (stock > 0)
-- [ ] No se permite un préstamo a un usuario inactivo
-- [ ] No se permite que un mismo usuario tenga dos préstamos activos del mismo libro (duplicado lógico)
-- [ ] La fecha de devolución esperada se calcula automáticamente (15 días desde hoy)
-- [ ] Al crear el préstamo, el stock del libro disminuye en 1 automáticamente
-- [ ] Todas las reglas anteriores se validan en el backend, no solo en el frontend
+- [X] Solo se puede prestar un libro con stock disponible (stock > 0)
+- [X] No se permite un préstamo a un usuario inactivo
+- [X] No se permite que un mismo usuario tenga dos préstamos activos del mismo libro (duplicado lógico)
+- [X] La fecha de devolución esperada se calcula automáticamente (15 días desde hoy)
+- [X] Al crear el préstamo, el stock del libro disminuye en 1 automáticamente
+- [X] Todas las reglas anteriores se validan en el backend, no solo en el frontend
 
 **Responsable:** _____________
-**Estado:** ☐ Pendiente ☐ En progreso ☐ Completado
+**Estado:** ☐ Pendiente ☐ En progreso X Completado
 
 ---
 
@@ -63,13 +63,13 @@ Sistema de Gestión de Biblioteca · Universidad José Cecilio del Valle
 **Para** liberar el ejemplar y que vuelva a estar disponible para otros usuarios
 
 **Criterios de aceptación:**
-- [ ] Al marcar como devuelto, el stock del libro aumenta en 1 automáticamente
-- [ ] No se puede devolver un préstamo que ya fue marcado como devuelto anteriormente
-- [ ] Se pide confirmación antes de registrar la devolución
-- [ ] La fecha de devolución real queda registrada
+- [X] Al marcar como devuelto, el stock del libro aumenta en 1 automáticamente
+- [X] No se puede devolver un préstamo que ya fue marcado como devuelto anteriormente
+- [X] Se pide confirmación antes de registrar la devolución
+- [X] La fecha de devolución real queda registrada
 
 **Responsable:** _____________
-**Estado:** ☐ Pendiente ☐ En progreso ☐ Completado
+**Estado:** ☐ Pendiente ☐ En progreso X Completado
 
 ---
 
