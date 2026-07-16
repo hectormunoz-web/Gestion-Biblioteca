@@ -16,6 +16,9 @@ export default function Layout({ children }) {
         <h2>📚 Biblioteca UJCV</h2>
         <Link to="/">Dashboard</Link>
         <Link to="/libros">Libros</Link>
+        <Link to="/categorias">Categorías</Link>
+        <Link to="/autores">Autores</Link>
+        <Link to="/prestamos">Préstamos</Link>
         {usuario?.rol === "admin" && <Link to="/usuarios">Usuarios</Link>}
         <div style={{ flex: 1 }} />
         <div style={{ fontSize: "0.85rem", opacity: 0.8, marginBottom: 8 }}>

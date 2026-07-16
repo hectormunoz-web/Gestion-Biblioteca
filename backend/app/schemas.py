@@ -78,3 +78,31 @@ def validar_isbn_unico(isbn, libro_id_excluir=None):
     if libro_id_excluir:
         query = query.filter(Libro.id != libro_id_excluir)
     return query.first() is None
+
+
+# ---------------------------------------------------------------------------
+# CATEGORIAS
+# ---------------------------------------------------------------------------
+class CategoriaSchema(Schema):
+    nombre = fields.Str(required=True, validate=validate.Length(min=2, max=80))
+
+    @validates("nombre")
+    def validar_nombre_unico(self, value, **kwargs):
+        if Categoria.query.filter_by(nombre=value.strip()).first():
+            raise ValidationError("Ya existe una categoría con este nombre.")
+
+
+# ---------------------------------------------------------------------------
+# AUTORES
+# ---------------------------------------------------------------------------
+class AutorSchema(Schema):
+    nombre = fields.Str(required=True, validate=validate.Length(min=2, max=150))
+    nacionalidad = fields.Str(required=False, allow_none=True, validate=validate.Length(max=80))
+
+
+# ---------------------------------------------------------------------------
+# PRESTAMOS
+# ---------------------------------------------------------------------------
+class PrestamoCreateSchema(Schema):
+    usuario_id = fields.Int(required=True)
+    libro_id = fields.Int(required=True)

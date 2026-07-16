@@ -8,6 +8,9 @@ import UsuarioList from "./components/usuarios/UsuarioList";
 import UsuarioForm from "./components/usuarios/UsuarioForm";
 import LibroList from "./components/libros/LibroList";
 import LibroForm from "./components/libros/LibroForm";
+import CategoriaList from "./components/categorias/CategoriaList";
+import AutorList from "./components/autores/AutorList";
+import PrestamoList from "./components/prestamos/PrestamoList";
 
 function ConLayout({ children }) {
   return <Layout>{children}</Layout>;
@@ -75,6 +78,33 @@ export default function App() {
             element={
               <PrivateRoute soloAdmin>
                 <ConLayout><LibroForm /></ConLayout>
+              </PrivateRoute>
+            }
+          />
+
+          <Route
+            path="/categorias"
+            element={
+              <PrivateRoute>
+                <ConLayout><CategoriaList /></ConLayout>
+              </PrivateRoute>
+            }
+          />
+
+          <Route
+            path="/autores"
+            element={
+              <PrivateRoute>
+                <ConLayout><AutorList /></ConLayout>
+              </PrivateRoute>
+            }
+          />
+
+          <Route
+            path="/prestamos"
+            element={
+              <PrivateRoute>
+                <ConLayout><PrestamoList /></ConLayout>
               </PrivateRoute>
             }
           />

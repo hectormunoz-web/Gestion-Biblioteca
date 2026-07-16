@@ -1,15 +1,21 @@
-# Sistema de Gestión de Biblioteca — Sprint 1 (Segundo Parcial)
+# Sistema de Gestión de Biblioteca — Sprint 1 y 2 (Segundo Parcial)
 
 Proyecto final de Ingeniería de Software I — Universidad José Cecilio del Valle.
 
-## Alcance de este sprint
+## Alcance cubierto hasta ahora
 
+**Sprint 1:**
 - Base de datos completa: 8 tablas con relaciones 1:N y N:M, normalizadas hasta 3FN.
 - Autenticación (registro/login) con contraseñas hasheadas con bcrypt.
 - CRUD completo de **Usuarios** (solo administradores).
 - CRUD completo de **Libros** (lectura para todos los roles, escritura solo administradores).
-- Validación en los tres niveles: frontend (React), backend (Flask + marshmallow) y base de datos (constraints de MySQL).
-- Dashboard con indicadores básicos.
+
+**Sprint 2:**
+- CRUD completo de **Categorías** y **Autores**.
+- Módulo de **Préstamos**: crear préstamo (con validación de stock, usuario activo, y duplicados), marcar devolución, y cálculo automático de estado "atrasado".
+- Dashboard actualizado con indicadores de préstamos activos y atrasados.
+
+**En ambos sprints:** validación en los tres niveles: frontend (React), backend (Flask + marshmallow) y base de datos (constraints de MySQL).
 
 ## Arquitectura
 
@@ -109,5 +115,4 @@ biblioteca-sprint1/
 
 ## Próximos sprints (no incluidos aún)
 
-- Sprint 2 (Segundo parcial): Categorías/Autores como CRUD completo, módulo de Préstamos y Dashboard con indicadores de préstamos.
 - Tercer parcial: Reservas, Multas, roles y permisos avanzados, reportes.
