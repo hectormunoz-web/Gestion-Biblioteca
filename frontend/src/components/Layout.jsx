@@ -13,7 +13,7 @@ export default function Layout({ children }) {
   return (
     <div className="layout">
       <aside className="sidebar">
-        <h2>📚 Biblioteca UJCV</h2>
+        <h2>📚 CRAI UJCV</h2>
         <Link to="/">Dashboard</Link>
         <Link to="/libros">Libros</Link>
         <Link to="/categorias">Categorías</Link>

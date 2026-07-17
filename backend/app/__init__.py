@@ -12,9 +12,21 @@ def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
 
+    print("=" * 60)
+    print("BASE DE DATOS:")
+    print(app.config["SQLALCHEMY_DATABASE_URI"])
+    print("=" * 60)
+
     db.init_app(app)
     jwt.init_app(app)
-    cors.init_app(app, resources={r"/api/*": {"origins": "*"}})
+    cors.init_app(app)
+
+    from app import models
+
+    with app.app_context():
+        print("Creando tablas...")
+        db.create_all()
+        print("Tablas creadas.")
 
     registrar_manejadores_errores(app)
 
@@ -31,9 +43,5 @@ def create_app():
     app.register_blueprint(categorias_bp)
     app.register_blueprint(autores_bp)
     app.register_blueprint(prestamos_bp)
-
-    @app.get("/api/salud")
-    def salud():
-        return {"estado": "ok"}, 200
 
     return app
